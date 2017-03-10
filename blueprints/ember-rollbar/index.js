@@ -12,6 +12,6 @@ module.exports = {
   // }
 
   afterInstall: function() {
-    return this.addBowerPackageToProject('rollbar', '1.9.1');
+    return this.addBowerPackageToProject('rollbar', '1.9.3');
   }
 };

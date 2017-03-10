@@ -24,6 +24,12 @@ test('configure method saves rollbar to local property', function(assert) {
   assert.ok(get(service, 'rollbar'), 'Service rollbar is equal to default Rollbar.');
 });
 
+test('configure method sets reportPromiseRejections option to true', function(assert) {
+  const service = this.subject();
+  service.configure();
+  assert.deepEqual(get(service, 'options'), { reportPromiseRejections: true }, 'Service options is equal to defaults.');
+});
+
 test('service rollbar has methods equal to default Rollbar', function(assert) {
   const service = this.subject();
   const rollbar = service.configure();
